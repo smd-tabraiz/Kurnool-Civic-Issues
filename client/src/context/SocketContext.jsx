@@ -5,7 +5,7 @@ import { useAuth } from './AuthContext';
 const SocketContext = createContext(null);
 export const useSocket = () => useContext(SocketContext);
 
-const SOCKET_URL = import.meta.env.VITE_SOCKET_URL || 'https://kurnool-civic-issues.onrender.com';
+const SOCKET_URL = import.meta.env.VITE_SOCKET_URL || 'https://kurnool-civic-issues-2.onrender.com';
 
 export const SocketProvider = ({ children }) => {
   const [socket, setSocket] = useState(null);
