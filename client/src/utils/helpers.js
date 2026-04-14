@@ -60,5 +60,6 @@ export const getImageUrl = (path) => {
   // Ensure the path starts with a slash
   const finalPath = normalizedPath.startsWith('/') ? normalizedPath : `/${normalizedPath}`;
   
-  return `http://localhost:5000${finalPath}`;
+  const backendUrl = import.meta.env.VITE_BACKEND_URL || 'https://kurnool-civic-issues.onrender.com';
+  return `${backendUrl}${finalPath}`;
 };
