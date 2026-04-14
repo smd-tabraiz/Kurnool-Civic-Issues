@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-  baseURL: import.meta.env.VITE_API_URL || 'https://kurnool-civic-issues-2.onrender.com/api',
+  baseURL: `${import.meta.env.VITE_API_URL}/api` || 'https://kurnool-civic-issues.onrender.com/api',
   headers: { 'Content-Type': 'application/json' },
 });
 
