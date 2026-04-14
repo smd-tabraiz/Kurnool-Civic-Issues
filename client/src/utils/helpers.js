@@ -61,5 +61,8 @@ export const getImageUrl = (path) => {
   const finalPath = normalizedPath.startsWith('/') ? normalizedPath : `/${normalizedPath}`;
   
   const backendUrl = import.meta.env.VITE_BACKEND_URL || 'https://kurnool-civic-issues-2.onrender.com';
+  // If the path already has a protocol or starts with 'res.cloudinary.com', return it as is
+  if (path.includes('res.cloudinary.com')) return path;
+  
   return `${backendUrl}${finalPath}`;
 };
